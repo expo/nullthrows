@@ -1,0 +1,40 @@
+{
+  "name": "@expo/nonnull",
+  "version": "1.0.0",
+  "description": "An idiomatic way to enforce values not to be null nor undefined, with first-class support for TypeScript",
+  "main": "nonnull.js",
+  "types": "nonnull.ts",
+  "files": [
+    "nonnull.js",
+    "nonnull.js.map",
+    "nonnull.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm nonnull.js nonnull.js.map",
+    "test": "node --test --require ts-node/register test/*-test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expo/nonnull.git"
+  },
+  "keywords": [
+    "nonnull",
+    "nullability",
+    "typescript"
+  ],
+  "author": "Expo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/expo/nonnull/issues"
+  },
+  "homepage": "https://github.com/expo/nonnull#readme",
+  "volta": {
+    "node": "18.5.0"
+  },
+  "devDependencies": {
+    "expect": "^28.1.1",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  }
+}
