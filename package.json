@@ -2,17 +2,17 @@
   "name": "@expo/nullthrows",
   "version": "1.0.0",
   "description": "An idiomatic way to enforce values not to be null nor undefined, with first-class support for TypeScript",
-  "main": "nullthrows.js",
-  "types": "nullthrows.ts",
+  "main": "build/nullthrows.js",
+  "types": "src/nullthrows.ts",
   "files": [
-    "nullthrows.js",
-    "nullthrows.js.map",
-    "nullthrows.ts"
+    "build",
+    "src",
+    "!src/**/test"
   ],
   "scripts": {
     "build": "tsc",
-    "clean": "rm nullthrows.js nullthrows.js.map",
-    "test": "node --test --require ts-node/register test/*-test.ts"
+    "clean": "rm -rf build",
+    "test": "node --test --require ts-node/register src/test/*-test.ts"
   },
   "repository": {
     "type": "git",
