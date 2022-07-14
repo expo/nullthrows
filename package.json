@@ -1,22 +1,22 @@
 {
-  "name": "@expo/nonnull",
+  "name": "@expo/nullthrows",
   "version": "1.0.0",
   "description": "An idiomatic way to enforce values not to be null nor undefined, with first-class support for TypeScript",
-  "main": "nonnull.js",
-  "types": "nonnull.ts",
+  "main": "nullthrows.js",
+  "types": "nullthrows.ts",
   "files": [
-    "nonnull.js",
-    "nonnull.js.map",
-    "nonnull.ts"
+    "nullthrows.js",
+    "nullthrows.js.map",
+    "nullthrows.ts"
   ],
   "scripts": {
     "build": "tsc",
-    "clean": "rm nonnull.js nonnull.js.map",
+    "clean": "rm nullthrows.js nullthrows.js.map",
     "test": "node --test --require ts-node/register test/*-test.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/expo/nonnull.git"
+    "url": "git+https://github.com/expo/nullthrows.git"
   },
   "keywords": [
     "nonnull",
@@ -26,14 +26,14 @@
   "author": "Expo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/expo/nonnull/issues"
+    "url": "https://github.com/expo/nullthrows/issues"
   },
-  "homepage": "https://github.com/expo/nonnull#readme",
+  "homepage": "https://github.com/expo/nullthrows#readme",
   "volta": {
     "node": "18.5.0"
   },
   "devDependencies": {
-    "expect": "^28.1.1",
+    "@types/node": "^18.0.4",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
   }

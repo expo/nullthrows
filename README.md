@@ -1,29 +1,29 @@
-# nonnull
-An idiomatic way to enforce values not to be `null` nor `undefined`, with first-class support for TypeScript. Very lightweight with no dependencies.
+# nullthrows
+An idiomatic way to enforce values not to be `null` or `undefined`, with first-class support for TypeScript. Very lightweight with no dependencies.
 
 ## Installation and usage
 ```sh
-npm install @expo/nonnull
+npm install @expo/nullthrows
 ```
 
 ```js
 import process from 'node:process';
-import nonnull from '@expo/nonnull';
+import nullthrows from '@expo/nullthrows';
 
 // nodeEnv is guaranteed to be a string. If the environment variable is
-// undefined, nonnull throws a TypeError.
-const nodeEnv = nonnull(process.env.NODE_ENV);
+// undefined, nullthrows throws a TypeError.
+const nodeEnv = nullthrows(process.env.NODE_ENV);
 
 // You can optionally provide a custom error message
-const nodeEnv2 = nonnull(process.env.NODE_ENV, `NODE_ENV must be defined`);
+const nodeEnv2 = nullthrows(process.env.NODE_ENV, `NODE_ENV must be defined`);
 ```
 
 ## API
 
-### `function nonnull<T>(value: T | null | undefined, message?: string): NonNullable<T>`
+### `function nullthrows<T>(value: T | null | undefined, message?: string): NonNullable<T>`
 
 #### Parameters
-- `value`: the value to enforce not to be `null` nor `undefined`
+- `value`: the value to enforce not to be `null` or `undefined`
 - `message`: an optional error message to use in the thrown `TypeError` if the given value is `null` or `undefined`
 
 #### Type parameters

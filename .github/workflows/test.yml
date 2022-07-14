@@ -18,4 +18,11 @@ jobs:
         key: ${{ runner.OS }}-${{ matrix.node-version}}-node_modules-${{ hashFiles('yarn.lock') }}
     - run: yarn --frozen-lockfile
     - run: yarn build
-    - run: yarn test
+    - name: Run tests
+      run: yarn --silent test | tee test-results.tap
+    - name: Display test summary
+      if: always()
+      uses: test-summary/action@v1
+      with:
+        paths: test-results.tap
+      
