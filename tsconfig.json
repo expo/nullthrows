@@ -3,12 +3,14 @@
     "esModuleInterop": true,
     "lib": ["es2019"],
     "module": "commonjs",
+    "outDir": "build",
+    "rootDir": "src",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "target": "es2019"
   },
-  "exclude": ["test"],
+  "exclude": ["src/test"],
   "ts-node": {
     "transpileOnly": true
   }
