@@ -19,7 +19,7 @@ jobs:
     - run: yarn --frozen-lockfile
     - run: yarn build
     - name: Run tests
-      run: yarn --silent test | tee test-results.tap
+      run: NODE_OPTIONS="--test-reporter=tap" yarn --silent test | tee test-results.tap
     - name: Display test summary
       if: always()
       uses: test-summary/action@v2
