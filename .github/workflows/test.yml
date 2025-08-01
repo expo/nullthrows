@@ -5,24 +5,23 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18]
+        node-version: [24]
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
     - name: Cache Node.js modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ${{ github.workspace }}/node_modules
         key: ${{ runner.OS }}-${{ matrix.node-version}}-node_modules-${{ hashFiles('yarn.lock') }}
     - run: yarn --frozen-lockfile
     - run: yarn build
     - name: Run tests
-      run: yarn --silent test | tee test-results.tap
+      run: NODE_OPTIONS="--test-reporter=tap" yarn --silent test | tee test-results.tap
     - name: Display test summary
       if: always()
-      uses: test-summary/action@v1
+      uses: test-summary/action@v2
       with:
         paths: test-results.tap
-      

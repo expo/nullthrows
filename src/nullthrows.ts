@@ -7,9 +7,12 @@
  * @returns the given value if it is neither `null` nor `undefined`
  * @throws {@link TypeError} if the given value is `null` or `undefined`
  */
-export = function nullthrows<T>(value: T | null | undefined, message?: string): NonNullable<T> {
+export default function nullthrows<T>(
+  value: T | null | undefined,
+  message?: string
+): NonNullable<T> {
   if (value != null) {
-    return value!;
+    return value;
   }
   throw new TypeError(message ?? `Expected value not to be null or undefined but got ${value}`);
 }

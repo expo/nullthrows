@@ -1,7 +1,7 @@
 import assert from 'node:assert';
 import test from 'node:test';
 
-import nullthrows from '../nullthrows';
+import nullthrows from '../nullthrows.ts';
 
 test(`throws if given null`, () => {
   assert.throws(() => nullthrows(null), TypeError);
