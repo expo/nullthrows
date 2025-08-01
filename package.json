@@ -1,6 +1,6 @@
 {
   "name": "@expo/nullthrows",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An idiomatic way to enforce values not to be null nor undefined, with first-class support for TypeScript and ES modules",
   "type": "module",
   "exports": {
