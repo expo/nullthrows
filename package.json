@@ -5,9 +5,9 @@
   "type": "module",
   "exports": {
     ".": {
+      "types": "./src/nullthrows.ts",
       "import": "./build/nullthrows.js",
-      "module-sync": "./build/nullthrows.js",
-      "types": "./src/nullthrows.ts"
+      "require": "./build/nullthrows.js"
     }
   },
   "files": [
